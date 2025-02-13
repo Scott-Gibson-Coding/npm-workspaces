@@ -1,7 +1,9 @@
+import TitleBanner from "../../library/components/ui/TitleBanner";
+
 export default function ConsumerApp() {
   return (
-    <h1 className="p-4 text-4xl font-semibold text-green-700">
+    <TitleBanner bannerClassName="bg-blue-300/70">
       Consumer Application
-    </h1>
+    </TitleBanner>
   );
 }
