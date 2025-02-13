@@ -2,6 +2,7 @@
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import AppLayout from "./library/components/AppLayout";
 import ConsumerApp from "./apps/consumer/App";
 import AdminApp from "./apps/admin/App";
 import "./index.css";
@@ -12,6 +13,8 @@ if (subfolders[0] === "admin") currentApp = "admin";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {currentApp === "consumer" ? <ConsumerApp /> : <AdminApp />}
-  </StrictMode>
+    <AppLayout>
+      {currentApp === "consumer" ? <ConsumerApp /> : <AdminApp />}
+    </AppLayout>
+  </StrictMode>,
 );
